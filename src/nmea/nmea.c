@@ -38,12 +38,13 @@ _crop_sentence(char *sentence, size_t length)
 	sentence += NMEA_PREFIX_LENGTH + 2;
 
 	/* Null terminate before end of line/sentence, 2 characters */
-	sentence[length - 9] = '\0';
+	// sentence[length - 9] = '\0';
 
 	/* Remove checksum, if there is one */
-	if ('*' == sentence[length - 12]) {
-		sentence[length - 12] = '\0';
-	}
+	*strrchr(sentence, '*') = '\0';
+	// if ('*' == sentence[length - 12]) {
+	// 	sentence[length - 12] = '\0';
+	// }
 
 	return sentence;
 }

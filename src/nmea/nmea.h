@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
+#include "flarm.h"
 
 /* NMEA sentence types */
 typedef enum {
@@ -14,7 +15,14 @@ typedef enum {
 	NMEA_GPGSV,
 	NMEA_GPRMC,
 	NMEA_GPTXT,
-	NMEA_GPVTG
+	NMEA_GPVTG,
+	NMEA_PFLAA,
+	NMEA_PFLAE,
+	NMEA_PFLAO,
+	NMEA_PFLAQ,
+	NMEA_PFLAR,
+	NMEA_PFLAU,
+	NMEA_PFLAV
 } nmea_t;
 
 /* NMEA cardinal direction types */

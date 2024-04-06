@@ -90,7 +90,7 @@ endif()
 if (NMEA_BUILD_SHARED_LIB)
     if (POLICY CMP0042)
         cmake_policy(PUSH)
-        cmake_policy(SET CMP0042 OLD)
+        cmake_policy(SET CMP0048 NEW)
     endif()
 
     set(LIBNMEA_TARGETS ${LIBNMEA_TARGETS} nmea_shared)

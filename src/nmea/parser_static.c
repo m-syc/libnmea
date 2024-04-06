@@ -41,6 +41,29 @@ DECLARE_PARSER_API(gptxt)
 #ifdef ENABLE_GPVTG
 DECLARE_PARSER_API(gpvtg)
 #endif
+// #ifdef FLARM_EXTENSION
+#ifdef ENABLE_PFLAU
+DECLARE_PARSER_API(pflau)
+#endif
+#ifdef ENABLE_PFLAA
+DECLARE_PARSER_API(pflaa)
+#endif
+#ifdef ENABLE_PFLAE
+DECLARE_PARSER_API(pflae)
+#endif
+#ifdef ENABLE_PFLAV
+DECLARE_PARSER_API(pflav)
+#endif
+#ifdef ENABLE_PFLAR
+DECLARE_PARSER_API(pflar)
+#endif
+#ifdef ENABLE_PFLAQ
+DECLARE_PARSER_API(pflaq)
+#endif
+#ifdef ENABLE_PFLAO
+DECLARE_PARSER_API(pflao)
+#endif
+// #endif
 
 nmea_parser_module_s parsers[PARSER_COUNT];
 
@@ -78,6 +101,29 @@ nmea_load_parsers()
 #ifdef ENABLE_GPVTG
 	PARSER_LOAD(gpvtg);
 #endif
+// #ifdef FLARM_EXTENSION
+#ifdef ENABLE_PFLAU
+	PARSER_LOAD(pflau);
+#endif
+#ifdef ENABLE_PFLAA
+	PARSER_LOAD(pflaa);
+#endif
+#ifdef ENABLE_PFLAE
+	PARSER_LOAD(pflae);
+#endif
+#ifdef ENABLE_PFLAV
+	PARSER_LOAD(pflav);
+#endif
+#ifdef ENABLE_PFLAR
+	PARSER_LOAD(pflar);
+#endif
+#ifdef ENABLE_PFLAQ
+	PARSER_LOAD(pflaq);
+#endif
+#ifdef ENABLE_PFLAO
+	PARSER_LOAD(pflao);
+#endif
+// #endif
 
 	return PARSER_COUNT;
 }
